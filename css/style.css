@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --ff-inter: 'Inter', sans-serif;
+  --light-blue-100: #F3F5FC;
+  --dark-blue-300: #0A3871;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--light-blue-100);
+  font-family: var(--ff-inter);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 9.6rem;
+  margin-bottom: 5.6rem;
+  position: relative;
+}
+
+.logo {
+  width: 3.2rem;
+  height: 4.8rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 1.6rem;
+}
+
+.form {
+  margin-bottom: 6.4rem;
+  padding: 1.6rem;
+  text-align: center;
+}
+
+.form__frase {
+  font-family: var(--ff-inter);
+  height: 19rem;
+  width: 34.3rem;
+  font-size: 2.4rem;
+  border: none;
+  padding: 1.6rem;
+  background-color: var(--light-blue-100);
+  resize: none;
+  margin-bottom: 6.4rem;
+  caret-color: var(--dark-blue-300);
+}
+
+.form__frase::placeholder {
+  color: var(--dark-blue-300);
+  font-size: 2.4rem;
+  font-family: var(--ff-inter);
+}
+
+.form__frase:focus {
+  outline: 2px solid var(--dark-blue-300);
+}
+
+.form__sugerencia {
+  width: 34.3rem;
+  height: 1.6rem;
+  display: none;
+  align-items: center;
+  margin: 0 auto 1.6rem;
+}
+
+.form__parrafo {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: var(--gray-400);
+}
+
+.form__icon {
+  margin-right: .8rem;
+}
+
+.btn__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.btn {
+  width: 34.3rem;
+  border: none;
+  border-radius: 2.4rem;
+  font-size: 1.6rem;
+  padding: 2.4rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.btn-encriptar {
+  background-color: var(--dark-blue-300);
+  color: var(--white);
+}
+
+.btn-desencriptar {
+  background-color: var(--light-blue-100);
+  color: var(--dark-blue-300);
+  border: 1px solid var(--dark-blue-300);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.copyright {
+  color: var(--dark-blue-300);
+  font-size: 1.8rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+}
+
+.heart {
+  color: red;
+}
+
+.links__container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3.2rem;
+}
+
+a .bx {
+  font-size: 2.4rem;
+  color: var(--dark-blue-300);
+}
+
+/* section que contiene los dos divs que se mostraran dependiendo de la accion del usuario */
+.desencriptar {
+  /* width: 32.7rem; */
+  background-color: var(--white);
+  border-radius: 3.2rem;
+  padding: 3.2rem;
+  margin: 0 auto 3.2rem;
+  text-align: center;
+  box-shadow: 0 24px 32px rgba(0, 0, 0, .2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Mensaje que aparece en caso de que el usuario no ingrese un texto */
+.desencriptar__mensaje {
+  width: 26.3rem;
+  display: none;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.desencriptar__mensaje__img-muñeco {
+  display: none;
+}
+
+.desencriptar__mensaje__titulo {
+  color: var(--gray-500);
+  font-size: 2.4rem;
+}
+
+.desencriptar__mensaje__parrafo {
+  color: var(--gray-400);
+  font-size: 1.6rem;
+}
+
+/* Mensaje una vez encriptado */
+.desencriptar__resultado {
+  width: 27.9rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.frase-encriptada {
+  font-size: 2.4rem;
+  font-family: var(--ff-inter);
+  color: var(--gray-400);
+  background-color: var(--white);
+  border: none;
+  resize: none;
+  padding: 1.6rem;
+  caret-color: var(--gray-400);
+  overflow-y: auto;
+}
+
+.btn-copiar {
+  width: 100%;
+  background-color: var(--white);
+  color: var(--dark-blue-300);
+  border: 1px solid var(--dark-blue-300);
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .form__frase, 
+  .desencriptar,
+  .form__sugerencia, 
+  .btn__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form__frase {
+    /* height: 55rem; */
+    margin-bottom: 6.4rem;
+  }
+
+  .form__sugerencia {
+    margin-bottom: 1.6rem;
+  }
+
+  .btn__container {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .desencriptar {
+    margin-bottom: 3.2rem;
+  }
+
+  .desencriptar__mensaje {
+    width: 100%;
+    display: none;
+  }
+
+  .desencriptar__resultado {
+    width: 100%;
+    display: flex;
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .links__container {
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__container {
+    position: relative;
+    flex-direction: row;
+    max-height: 100vh;
+    gap: 5rem;
+  }
+
+  .header {
+      width: 12rem;
+      margin: 0;
+      position: absolute;
+      top: 4rem;
+      left: 1.6rem;
+      width: 12rem;
+  }
+  
+  .logo {
+    top: 0;
+    left: 0;
+  }
+
+  .form {
+    margin-top: 16.8rem;
+  }
+
+  .form__frase,
+  .form__sugerencia, 
+  .btn__container {
+    width: 50rem;
+  }
+
+  .btn {
+    width: 25rem;
+  }
+
+  .btn-copiar {
+    width: 100%;
+  }
+
+  .btn__container {
+    flex-direction: row;
+    margin-bottom: 8rem;
+  }
+
+  .desencriptar__mensaje__img-muñeco {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  .desencriptar {
+    width: 35%;
+    margin: 4rem 4rem 4rem 0;
+  }
+
+  .desencriptar__mensaje {
+    width: 100%;
+    display: flex;
+  }
+
+  .desencriptar__resultado {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .frase-encriptada {
+    height: 100%;
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .links__container {
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 144.0rem;
+    margin: 0 auto;
+  }
+
+  .main__container {
+    flex-direction: row;
+    max-height: 100vh;
+    position: relative;
+    gap: 10rem;
+  }
+
+  .header {
+    position: absolute;
+    top: 4rem;
+    left: 1.6rem;
+    width: 12rem;
+  }
+  
+  .logo {
+    top: 0;
+    left: 0;
+  }
+
+  .form {
+    margin-top: 16.8rem;
+  }
+
+  .form__frase,
+  .form__sugerencia, 
+  .btn__container {
+    width: 62.8rem;
+  }
+
+  .form__frase {
+    height: 26.9rem;
+  }
+
+  .btn__container {
+    flex-direction: row;
+    margin-bottom: 8rem;
+  }
+
+  .desencriptar__mensaje__img-muñeco {
+    display: inline-block;
+  }
+
+  .desencriptar {
+    width: 40rem;
+    margin:  4rem 4rem 4rem 0;
+  }
+
+  .desencriptar__mensaje {
+    width: 33.6rem;
+    display: flex;
+  }
+
+  .desencriptar__resultado {
+    width: 33.6rem;
+    height: 100%;
+    display: none;
+  }
+
+  .frase-encriptada {
+    height: 100%;
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .links__container {
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+}

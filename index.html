@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador de texto</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/ninja-cat.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+  <header class="header">
+    <img class="logo" src="img/alura-logo.svg" alt="Logo de Alura">
+  </header>
+  <main class="main__container">
+    <form class="form">
+      <textarea class="form__frase" id="frase" placeholder="Ingrese el texto aqui" required></textarea>
+      <div class="form__sugerencia">
+        <span class="form__icon"><img src="img/icon.svg"></span>
+        <p class="form__parrafo">Solo letras minúsculas y sin acentos</p>
+      </div>
+      <div class="btn__container">
+        <input class="btn btn-encriptar" id="btn-encriptar" type="button" value="Encriptar">
+        <input class="btn btn-desencriptar" id="btn-desencriptar" type="button" value="Desencriptar">
+      </div>
+    </form>
+    <section class="desencriptar">
+      <div class="desencriptar__mensaje">
+        <img class="desencriptar__mensaje__img-muñeco" src="img/muñeco.svg" alt="Muñeco Ilustración">
+        <h2 class="desencriptar__mensaje__titulo">Ningún mensaje fue encontrado</h2>
+        <p class="desencriptar__mensaje__parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+      <div class="desencriptar__resultado">
+        <textarea class="frase-encriptada" id="frase-encriptada" readonly></textarea>
+        <input class="btn btn-copiar" id="btn-copiar" type="button" value="Copiar">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="copyright">made whit <span class="heart">❤</span> by Facundo Luna &copy; 2022</p>
+    <div class="links__container">
+      <a class="link" href="https://www.linkedin.com/in/facundoluna/">
+        <i class='bx bxl-linkedin-square'></i>
+      </a>
+      <a class="link" href="https://github.com/Facugl">
+        <i class='bx bxl-github'></i>
+      </a>
+      <a class="link" href="https://twitter.com/FacundoLuna__">
+        <i class='bx bxl-twitter'></i>
+      </a>
+    </div>
+  </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
